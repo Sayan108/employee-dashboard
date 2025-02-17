@@ -7,7 +7,8 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import { persistor, store } from "./redux/index.ts";
 import { PersistGate } from "redux-persist/integration/react";
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+const PUBLISHABLE_KEY =
+  "pk_test_bWFnaWNhbC1seW54LTU5LmNsZXJrLmFjY291bnRzLmRldiQ";
 
 console.log("Clerk Publishable Key:", PUBLISHABLE_KEY); // Debugging
 
