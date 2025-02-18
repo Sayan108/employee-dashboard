@@ -144,7 +144,6 @@ const ModalForm: React.FC = () => {
                 <div
                   style={{
                     ...styles.input,
-                    alignSelf: "flex-start",
                     width: "90%",
                     alignItems: "flex-start",
                   }}
@@ -263,6 +262,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "14px",
     color: "black",
     width: "90%",
+    backgroundColor: "transparent",
   },
   error: {
     color: "red",
