@@ -55,8 +55,6 @@ const DataGrid = () => {
         headerName: "Role",
         sortable: true,
         filter: true,
-
-        floatingFilter: true,
         width: window.outerWidth / 5,
       },
       {

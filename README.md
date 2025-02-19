@@ -1,50 +1,98 @@
-# React + TypeScript + Vite
+# Employee Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+The **Employee Dashboard** is a web application designed to manage and visualize employee data efficiently. It provides an interactive data grid with search, filtering, sorting, and performance tracking features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Features
 
-## Expanding the ESLint configuration
+- 📊 **Interactive Data Grid** - View, sort, and filter employee records using AG Grid
+- 🔍 **Search Functionality** - Dynamic search with live highlighting
+- 🎨 **Minimal & User-Friendly UI** - Built with plain CSS for a clean and responsive experience (ShadCN UI was considered but not implemented)
+- 🔄 **Real-time Updates** - Reflects data changes instantly
+- 📧 **Email Notifications** - Uses EmailJS for email triggering
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🏗️ Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend:** React, TypeScript, Vite, CSS
+- **State Management:** Redux Toolkit, Redux, Redux Persist
+- **Grid Component:** AG Grid
+- **Email Handling:** EmailJS
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔧 Installation
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/Sayan108/employee-dashboard.git
+cd employee-dashboard
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2️⃣ Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```sh
+npm install  # or yarn install
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 3️⃣ Start the Development Server
+
+```sh
+npm run dev  # or yarn dev
+```
+
+### 4️⃣ Open in Browser
+
+Visit `http://localhost:5173` to access the dashboard.
+
+## 📸 Screenshots
+
+_(Add relevant screenshots here)_
+
+## 📌 Usage
+
+- Navigate through the dashboard to view employee details.
+- Use the search bar to find employees quickly.
+- Filter and sort data using AG Grid options.
+- Send emails using EmailJS integration.
+
+## 🏗️ Project Structure
+
+```
+📂 employee-dashboard
+├── 📁 src
+│   ├── 📁 components      # Reusable UI components
+│   ├── 📁 pages           # Page components
+│   ├── 📁 hooks           # Custom React hooks
+│   ├── 📁 redux           # Redux Toolkit store setup
+│   ├── 📁 styles          # Global CSS files
+│   ├── 📁 assets          # Images, icons, and styles
+│   ├── App.tsx           # Main App component
+│   └── main.tsx          # Entry point
+└── 📄 package.json        # Dependencies & scripts
+```
+
+## 🚀 Deployment
+
+### Build for Production
+
+```sh
+npm run build  # or yarn build
+```
+
+```
+
+## 🛠️ Implementation Details
+- **Data Persistence:** Implemented using Redux Persist to maintain application state across sessions and it can be further extended using backend apis of any framework .
+- **Styling:** Initially planned to use ShadCN UI, but I couldn't . Instead, plain CSS was used to achieve a clean UI.
+- **Email Trigger:** Successfully integrated with EmailJS for sending automated emails.
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+🚀 **Happy Coding!** 🎉
+
 ```
